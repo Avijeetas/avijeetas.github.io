@@ -144,7 +144,7 @@ a.socialicon {
 
 /* Social icon in dark mode */
 html[light-mode="dark"] .socialicon{
-  background-color: #141516;
+  background-color: rgb(25 65 104);
 }
 
 .kaggle i {
@@ -220,60 +220,89 @@ html[light-mode="dark"] .socialicon{
 
 /*
 ---------------------------
-   INSTAGRAM MICROANIMATION
+   GMAIL MICROANIMATION
 ---------------------------
 */
 
-.instagram-icon {
-  width: 90px !important;
- 
+.gmail-icon{
+  margin: -20px 10px 0px 10px;
 }
-.st0 {
-  fill:none;
-  stroke:#EF4649;
-  stroke-width:7;
-  stroke-linecap:round;
-  stroke-miterlimit:10;
+.gmail:hover .gmail-icon>rect{
+  animation: rect-up 0.3s linear infinite;
 }
 
-.instagram:hover #littleCircle {
-  stroke-dasharray:150;
-}
 
-.instagram #shutter{
-  display:none;
-}
-.instagram:hover #shutter{
-  display: block;
-  animation: shutter 1s linear infinite;
-}
-.instagram:hover #lens{
-  fill:#EF4649;
-  animation: lens 1.5s linear infinite;
-
-}
-
-@keyframes shutter {
-  0%, 50% {
-          stroke-dashoffset: 150;
-          
+@keyframes rect-up {
+  50% {
+      y:10px;
+      height:11px;
+   }
+  0%{
+      y:13px;
+      height:8px;  
       }
+  
+}
+
+.gmail:hover .gmail-icon> circle{
+  animation: bounce 0.4s linear infinite;
+}
+
+@keyframes bounce {
   75% {
-          fill:#EF4649;
-          stroke-dashoffset: 0;
-          stroke-width:11;
+      cy: 8px;
+   }
+   50%{
+      cy: 4px
+   }
+  0%{
+      cy:4px
       }
+  
 }
 
-@keyframes lens {
-  0%, 75% {
-          opacity: 0;
-      }
-  100% {
-          opacity: 1;
-      }
+/*
+---------------------------
+   linktr MICROANIMATION
+---------------------------
+*/
+
+.linktr-icon{
+  margin: 10px 10px 10px 15px;
+}
+.linktr:hover .linktr-icon>rect{
+  animation: rect-up 0.3s linear infinite;
 }
 
+
+@keyframes rect-up {
+  50% {
+      y:10px;
+      height:11px;
+   }
+  0%{
+      y:13px;
+      height:8px;  
+      }
+  
+}
+
+.linktr:hover .linktr-icon> circle{
+  animation: bounce 0.4s linear infinite;
+}
+
+@keyframes bounce {
+  75% {
+      cy: 8px;
+   }
+   50%{
+      cy: 4px
+   }
+  0%{
+      cy:4px
+      }
+  
+}
 
 /*
 ---------------------------
@@ -629,4 +658,40 @@ a:hover {
   .text{
     margin-top: 1rem;
   }
+}
+
+.announcement {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.job-description {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.job-description h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.job-description h3 {
+  color: #555;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.job-description ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.job-description li {
+  margin-bottom: 5px;
+  color: #666;
+  font-size: 16px;
 }

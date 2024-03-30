@@ -5,26 +5,48 @@ AOS.init();
 const experiencecards = document.querySelector(".experience-cards");
 const exp = [
   {
-    title: "Software Development Intern",
+    title: "Software Engineer-I",
     cardImage: "assets/images/experience-page/flipkart.jpg",
-    place: "Flipkart",
-    time: "(May, 2020 - present)",
-    desp: "<li>Worked to migrate Flipkart lite’s product page to AMP pages so that they load up instantly.</li> <li>Made changes in the current progressive web app of Flipkart to react to different actions performed on AMP page.</li> <li>Created a node module called “fk-amp” which abstracts all the files and middlewares and can be easily imported and used from express server.</li>",
+    place: "Vivasoft Limited",
+    time: "(Nov, 2022 - July, 2023)",
+    stack: "Spring(boot,WebFlux), Postgres, Vue.js, Redis, RabbitMQ, AWS, TypeScript",
+    desp: `<li>Designed a Custom API <b>Ratelimiter</b> using Spring Boot, boosting Transactions/Second(TPS) by more than 50 for individual microservices.</li>
+    <li>Refactored legacy Java microservices into Reactive Java, leveraging WebFlux, and rewrote
+    Spring Security for the Gateway API microservice.</li>
+    <li>Developed a unified CPS TPS backend API, consolidating <b>3</b> separate fintech services for
+    managing financial systems.</li>
+    <li>Developed of the Admin Portal Frontend and backend using Vue.js and TypeScript,
+    optimizing the codebase for maximum API utilization.</li>`,
   },
   {
-    title: "Student Developer",
+    title: "Software Engineer, E-Goverence",
     cardImage: "assets/images/experience-page/gsoc.png",
-    place: "Google Summer Of Code",
-    time: "(Mar - Aug, 2019)",
-    desp: "<li>Worked with MOZILLA as a part of Google Summer Of Code.</li><li>Worked on Extension Activity Monitor which is a privileged extension for Firefox that uses the activityLog API (privileged API) to monitor the activities of the other installed extensions.</li><li>The activityLog API listens for logs from other installed extensions.</li>",
-  },
+    place: "Reve Systems",
+    time: "(July - October, 2022)",
+    desp: `<li>Orchestrated <b>100%</b> automation of the Report Management System, featuring customized
+    menus, automated indexing, and intuitive drag-and-drop modules.</li>
+    <li>Spearheaded the development of a Venue Booking System,resulting in a remarkable <b>70-
+    80%</b> reduction in workload through swift template generation.</li>
+    <li>Engineered NLP APIs for a sophisticated Duplicate Question Checker, demonstrating
+    versatility with <b>2K+</b> questions and user-friendly search criteria.</li>
+    <li>Led the redesign of the Role-wise Notification and Approval System, incorporating
+    complex business logic for <b>13</b> distinct tasks.</li>
+    <li>Introduced an innovative in-line file attachment system, enhancing overall efficiency in
+    data management by <b>60%</b>.</li>`
+    },
   {
-    title: "Research Intern",
-    cardImage: "assets/images/experience-page/IIT_Bombay.jpg",
-    place: "IIT, Bombay",
-    time: "(Dec, 19 - Jan, 20)",
-    desp: "<li>Worked on the project “LTI (Learning Tools Interoperability) 2.0 standards Implementation for ekShiksha.</li><li>Designed a software that would help faculty to create a quiz using the questions from the database based on his/her choice of topics and he should be provided with various facilities and options to create a quiz of his choice.</li>",
-  },
+    title: "Junior Software Engineer, E-Goverence",
+    cardImage: "assets/images/experience-page/gsoc.png",
+    place: "Reve Systems",
+    time: "(June 2021 - June, 2022)",
+    desp: `<li>Designed efficient user management systems, optimizing code and minimizing
+    redundancy for enhanced performance by <b>30%</b>.</li>
+    <li>Integrated custom features into PDF services, facilitating the creation of diverse document
+    formats tailored to user needs.</li>
+    <li>Successfully implemented room booking systems, streamlining internal and external
+    meeting processes including agendas, meeting request, report generation for clients.</li> 
+`
+    },
 ];
 
 const showCards2 = () => {
@@ -34,7 +56,7 @@ const showCards2 = () => {
       (output += `        
     <div class="col gaap" data-aos="fade-up" data-aos-easing="linear" data-aos-delay="100" data-aos-duration="400"> 
       <div class="card card1">
-        <img src="${cardImage}" class="featured-image"/>
+        
         <article class="card-body">
           <header>
             <div class="title">
@@ -94,7 +116,7 @@ const showCards = () => {
       (output += `        
       <div class="card volunteerCard" data-aos="fade-down" data-aos-easing="linear" data-aos-delay="100" data-aos-duration="600" style="height: 550px;width:400px">
       
-      <img src="${cardImage}" height="250" width="65" class="card-img" style="border-radius:10px">
+     
       <div class="content">
           <h2 class="volunteerTitle">${title}</h2><br>
           <p class="copy">${description}</p></div>
