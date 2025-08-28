@@ -1,4 +1,136 @@
 /* Global page and element settings ----------------------------------------------------- */
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --link-color: #337ab7;
+            --bg-secondary: #6c757d;
+            --bg-success: #5cb85c;
+            --badge-success: #5cb85c;
+            --table-bg: #f9f9f9;
+            --solid-box-bg: #f5f5f5;
+            --btn-bg: #ffffff;
+            --btn-text: #333333;
+            --btn-border: #cccccc;
+        }
+
+        [data-theme="dark"] {
+            --bg-color: #1a1a1a;
+            --text-color: #e0e0e0;
+            --link-color: #66b3ff;
+            --bg-secondary: #4a4a4a;
+            --bg-success: #3d8b3d;
+            --badge-success: #3d8b3d;
+            --table-bg: #2e2e2e;
+            --solid-box-bg: #252525;
+            --btn-bg: #333333;
+            --btn-text: #e0e0e0;
+            --btn-border: #555555;
+        }
+
+        body {
+            background-color: var(--bg-color) !important;
+            color: var(--text-color) !important;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        a {
+            color: var(--link-color) !important;
+        }
+
+        .table {
+            background-color: var(--table-bg) !important;
+            color: var(--text-color) !important;
+        }
+
+        .solid-box {
+            background-color: var(--solid-box-bg) !important;
+            color: var(--text-color) !important;
+        }
+
+        .bg-secondary {
+            background-color: var(--bg-secondary) !important;
+            color: var(--text-color) !important;
+        }
+
+        .bg-success {
+            background-color: var(--bg-success) !important;
+            color: var(--text-color) !important;
+        }
+
+        .badge-success {
+            background-color: var(--badge-success) !important;
+            color: var(--text-color) !important;
+        }
+
+        .btn-default {
+            background-color: var(--btn-bg) !important;
+            color: var(--btn-text) !important;
+            border-color: var(--btn-border) !important;
+        }
+
+        .theme-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;
+            padding: 8px 12px;
+            font-size: 1.2em;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--bg-secondary) !important;
+            color: var(--text-color) !important;
+            padding: 8px;
+            z-index: 1000;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        /* Override Bootstrap defaults to ensure theme consistency */
+        .container, .row, .col-sm-3, .col-sm-6 {
+            background-color: transparent !important;
+            color: var(--text-color) !important;
+        }
+
+        /* Ensure container width is constrained */
+        .container {
+            max-width: 1140px !important;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        /* Adjust column padding for tighter layout */
+        .col-sm-3, .col-sm-6 {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        /* Ensure image and table fit within column */
+        .img-responsive {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .table {
+            width: 100%;
+            table-layout: auto;
+        }
 body {
   font-size: 16px;
   font-family: "Open Sans", Arial, sans-serif;
@@ -314,6 +446,7 @@ nav {
 /* Setting Lines after headers */
 h3 {
   position: relative;
+  display: inline-block; /* Ensure the heading behaves like inline-block */
 }
 
 h3 span {
@@ -324,12 +457,12 @@ h3 span {
 h3:after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -10px; /* Adjust this to ensure the line is just below the text */
   left: 0;
   right: 0;
   height: 0.5em;
   border-top: 2px solid slategray;
-  z-index: -1;
+  z-index: -2; /* Ensures the line appears below the text */
 }
 
 /* Format the footer ---------------------------------------------------------- */
@@ -610,4 +743,11 @@ code {
   border-radius: 5px;
   text-align: center;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+.badge-success {
+    background-color: #28a745;  /* This is a green color */
+    color: white;
+    border-radius: 12px;
+    padding: 5px 10px;
+    font-size: 14px;
 }
