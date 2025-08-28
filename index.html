@@ -26,11 +26,17 @@
 
     <!-- Navbar Include -->
     <header role="banner">
-        <div w3-include-html="navbar.html" aria-label="Main navigation"></div>
+    <div w3-include-html="navbar.html" aria-label="Main navigation"></div>
+    <div class="controls-container">
         <button id="theme-toggle" aria-label="Switch to dark mode" class="btn btn-default theme-toggle">
             <i class="fas fa-adjust"></i>
         </button>
-    </header>
+        <div class="color-picker-container">
+            
+            <input type="color" id="bgColorPicker" value="#ffffff">
+        </div>
+    </div>
+</header>
 
     <!-- Main content -->
     <main id="main-content" role="main">
@@ -188,7 +194,48 @@
                 console.error('Error in theme toggle script:', error);
             }
         })();
+        document.addEventListener('DOMContentLoaded', function() {
+    const bgColorPicker = document.getElementById('bgColorPicker');
+    const themeToggle = document.getElementById('theme-toggle');
+    const htmlElement = document.documentElement;
+    const defaultLightBgColor = '#ffffff'; // Default light mode background color
+
+    // Set initial background color
+    bgColorPicker.value = getComputedStyle(htmlElement).getPropertyValue('--bg-color').trim();
+
+    // Update background color on color picker change
+    bgColorPicker.addEventListener('input', function() {
+        htmlElement.style.setProperty('--bg-color', this.value);
+        localStorage.setItem('bgColor', this.value);
+    });
+
+    // Load saved background color from localStorage, if any
+    const savedBgColor = localStorage.getItem('bgColor');
+    if (savedBgColor) {
+        htmlElement.style.setProperty('--bg-color', savedBgColor);
+        bgColorPicker.value = savedBgColor;
+    }
+
+    // Reset color picker when switching to light mode
+    themeToggle.addEventListener('click', function() {
+        const currentTheme = htmlElement.getAttribute('data-theme');
+        if (!currentTheme || currentTheme === 'light') {
+            // Switching to light mode (either from dark or already in light)
+            htmlElement.setAttribute('data-theme', 'light');
+            htmlElement.style.setProperty('--bg-color', defaultLightBgColor);
+            bgColorPicker.value = defaultLightBgColor;
+            localStorage.removeItem('bgColor'); // Clear custom background color
+        } else {
+            // Switching to dark mode
+            htmlElement.setAttribute('data-theme', 'dark');
+            // Optionally reset to dark mode default if needed
+            const defaultDarkBgColor = '#1a1a1a';
+            htmlElement.style.setProperty('--bg-color', defaultDarkBgColor);
+            bgColorPicker.value = defaultDarkBgColor;
+            localStorage.removeItem('bgColor');
+        }
+    });
+});
     </script>
 </body>
 </html>
-
