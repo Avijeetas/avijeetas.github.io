@@ -1,202 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Metadata for the Webpage -->
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Avijeet Shil</title>
-        <!-- Favicons -- We recommend this site for generating favicons: https://www.favicon-generator.org/ -->
-        <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-        <link rel="icon"
-              type="image/png"
-              sizes="192x192"
-              href="/android-icon-192x192.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-        <meta name="msapplication-TileColor" content="#ffffff">
-        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-        <meta name="theme-color" content="#ffffff">
-        <!-- Bootstrap CSS files-->
-        <link rel="stylesheet"
-              href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-              integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
-              crossorigin="anonymous">
-        <!-- jQuery UI CSS (optional) -->
-        <link rel="stylesheet"
-              href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-        <!-- Google web fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700"
-              rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600"
-              rel="stylesheet">
-        <!-- Font Awesome Web Icons -->
-        <link rel="stylesheet"
-              href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-              integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-              crossorigin="anonymous">
-        <!-- Academicons Courtesy of https://jpswalsh.github.io/academicons/ -->
-        <link rel="stylesheet"
-              href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
-        <!-- Local styles -->
-        <link rel="stylesheet" href="css/main.css">
-    </head>
-    <body>
-        <!-- navbar include -->
-        <div w3-include-html="navbar.html"></div>
-        <div class="spacer-div-3 hidden-xs hidden-xs"></div>
-        <!-- Main content -->
+<head>
+    <!-- Metadata for the Webpage -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Personal portfolio of Avijeet Shil, Graduate Research Assistant at University of North Texas">
+    <title>Avijeet Shil</title>
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <!-- Bootstrap CSS files-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- Google web fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600" rel="stylesheet">
+    <!-- Font Awesome Web Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navbar Include -->
+    <header role="banner">
+        <div w3-include-html="navbar.html" aria-label="Main navigation"></div>
+        <button id="theme-toggle" aria-label="Switch to dark mode" class="btn btn-default theme-toggle">
+            <i class="fas fa-adjust"></i>
+        </button>
+    </header>
+
+    <!-- Main content -->
+    <main id="main-content" role="main">
         <div id="main-container" class="container">
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-3">
                     <img class="center-block img img-responsive img-thumbnail"
                          src="./img/avijeet.JPEG"
-                         alt="Image of Avijee Shil">
-                    <p id="title">
-                        Graduate Research Assistant
-                        <br>
-                        <span id="program">University of North Texas</span>
-                    </p>
-                    <table class="table" id="contact-table">
+                         alt="Portrait of Avijeet Shil, Graduate Research Assistant at University of North Texas">
+                    
+                    <table class="table" id="contact-table" aria-label="Contact information">
                         <tbody>
                             <tr>
+                                <p aria-level="1">
+                        Graduate Research Assistant<br>
+                        <span id="program">University of North Texas</span>
+                    </p>
+                            </tr>
+                            <tr>
                                 <td style="width:30px">
-                                    <i class="fas fa-home"></i>
+                                    <i class="fas fa-home" aria-label="Address"></i>
                                 </td>
-                                <td>
-                                    3940 N Elm St
-                                    <br>
-                                    Denton, TX 76207 
-                                </td>
+                                <td>3940 N Elm St, Denton, TX 76207</td>
                             </tr>
                             <tr>
-                                <td>
-                                    <i class="fas fa-at"></i>
-                                </td>
-                                <td>
-                                    <a href="mailto:avijeetshil110@gmail.com">avijeetshil110 at gmail dot com</a>
-                                </td>
+                                <td><i class="fas fa-at" aria-label="Email"></i></td>
+                                <td><a href="mailto:avijeetshil110@gmail.com">avijeetshil110 at gmail dot com</a></td>
                             </tr>
                             <tr>
-                                <td>
-                                    <i class="fas fa-at"></i>
-                                </td>
-                                <td>
-                                    <a href="mailto:avijeetshil@my.unt.edu">avijeetshil at my dot unt dot edu</a>
-                                </td>
+                                <td><i class="fas fa-at" aria-label="University email"></i></td>
+                                <td><a href="mailto:avijeetshil@my.unt.edu">avijeetshil at my dot unt dot edu</a></td>
                             </tr>
                         </tbody>
                     </table>
-       
+
+                    <!-- Add these links to make sure FontAwesome and icons load -->
+                    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+                    <link href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.0/css/academicons.min.css" rel="stylesheet">
                 </div>
-                <div class="col-sm-8">
+                <div class="col-sm-6">
+                    <section class="solid-box" aria-labelledby="career-opportunities">
+                        <h2 id="career-opportunities" class="sr-only">Career Opportunities</h2>
+                        <p align="center">
+                            I am actively seeking internships and full-time opportunities in Research/Data Science, Research/Data Engineering, or ML positions starting from <strong>next year</strong>.<br><br>
+                            Check my <a href="./public/Avijeet_Shil.pdf" target="_blank">CV</a> for more details.
+                        </p>
+                    </section>
+                    <section aria-labelledby="research">
+                        <h2 id="research">Research</h2>
+                        <p>I am a Graduate Research Assistant working on <strong>semantic query interpretation</strong> for <strong>Question Answering</strong> systems. My work emphasizes <strong>interpretability</strong> and <strong>explainability</strong>, and has been accepted at <strong>RANLP (Recent Advances in Natural Language Processing)</strong>.</p>
+                        <p>Previously, I served as a <strong>Graduate Teaching Assistant</strong> for <strong>Capstone Projects, Software Engineering</strong>, where I managed over <strong>50 projects</strong> and guided students through the <strong>SDLC</strong>, <strong>Agile</strong>, and <strong>Scrum</strong> pipelines, developing critical project management and leadership skills, used my full-stack development knowledge.</p>
+                        <p>As a <strong>Ph.D. student</strong> at the <strong>University of North Texas</strong>, I work under the supervision of <a href="https://engineering.unt.edu/people/files/Wei_Jin.pdf" target="_blank"><strong>Dr. Wei Jin</strong></a> in the domains of <strong>Text and Web Data Mining</strong>, <strong>Information Retrieval</strong>, and <strong>Biomedical and Healthcare Informatics</strong>. I am also involved in the <strong>Text and Web Mining Lab</strong> as a research assistant.</p>
 
-                
-<div class="solid-box">
-<p align="center">
-  I am looking for internships and full-time scientist/engineering positions starting from <strong>next year</strong>.<br><br>
-  My preference: <strong>Research/Data Scientist</strong>, <strong>Research/Data/Software Engineer/SWE, ML</strong>.<br><br>
-  Check my <a href="https://drive.google.com/file/d/15N3dyz8PxoEui1aOgwEE9m63aZiQMHis/view?usp=sharing">CV</a> for more details.
-</p>
+                        <p>My research focuses on the following areas:</p>
+                        <ul>
+                            <li><strong>Query Reformulation in Search Engines</strong></li>
+                            <li><strong>Reinforcement Learning</strong> and its application to search query optimization</li>
+                            <li><strong>Large Language Models (LLMs)</strong> for knowledge extraction and information retrieval</li>
+                            <li><strong>Knowledge Graphs</strong> for enhancing search relevance and semantic search</li>
+                            <li><strong>Applied Machine Learning</strong> to improve data-driven decision-making processes</li>
+                        </ul>
 
-</div>
-<p> I am a Graduate Research Assistant, this summer working on semantic query interpretation for Question Answering, with a focus on interpretability and explainability. My work has been accepted at RANLP (Recent Advances in Natural Language Processing).</p>
+                        <p>You can view my research publications on my <a href="https://scholar.google.com.au/citations?hl=en&pli=1&user=NuIbgCAAAAAJ" target="_blank"><strong>Google Scholar profile</strong></a>.</p>
+                        <p>Before my doctoral studies, I earned my <strong>B.Sc. in Computer Science and Engineering</strong> from <strong>Chittagong University of Engineering and Technology (CUET)</strong> in June 2021. I gained valuable industry experience at <strong>W3Eden</strong> (WordPress plugin management), <strong>REVE Systems</strong> (enterprise software solutions for the Bangladesh Parliament), and <strong>BKash</strong> (developing <strong>AutoPay</strong> features for fintech). At BKash, I worked on <strong>scalable systems</strong> that handled recurring payments, bill payments, and mobile recharge for millions of users.</p>
+                    </section>
 
-<p> I am also a Ph.D. student at the University of North Texas, Denton, USA, working under the supervision of <a href="https://engineering.unt.edu/people/files/Wei_Jin.pdf">Dr. Wei Jin, Associate Professor</a>, in the broad area of Text and Web Data Mining, Information Retrieval, Biomedical and Healthcare Informatics. Currently, I am a graduate research assistant at the Text and Web Mining Lab. </p> 
+                    <section aria-labelledby="publications">
+                        <h2 id="publications" class="push-down-3">Publications</h2>
+                        <ul id="publications">
+                            <li><b>Shil, A.</b>, & Jin, W. (2025). SQUIRE+LLM: A LLM-assisted ESA-based unsupervised semantic query interpretation and ranking engine. <em class="bg-secondary text-white">(Under review).</em></li>
+                            <li>Florescu, C., <b>Shil, A.</b>, & Jin, W. (2025). Keyphrase Extraction using Network Representation Learning. <em class="bg-secondary text-white">(Under review).</em></li>
+                            <li><b>Shil, A.</b>, & Jin, W. (2025). ESAQueryRank: Ranking query interpretations for document retrieval using explicit semantic analysis. <em class="bg-success text-white">Accepted at RANLP Poster Session.</em></li>
+                            <li>Florescu, C., <b>Shil, A.</b>, & Jin, W. (2024). A new learning-to-rank framework for keyphrase extraction using multi-scale ratings and feature fusion. In <em>Asia-Pacific Web (APWeb) and Web-Age Information Management (WAIM) Joint International Conference on Web and Big Data </em>(pp. 63-79). Singapore: Springer Nature Singapore.</li>
+                            <li>Zubair, M., Iqbal, M. D. A., <b>Shil, A.</b>, Chowdhury, M. J. M., Moni, M. A., & Sarker, I. H. (2022). An improved K-means clustering algorithm towards an efficient data-driven modeling. <em>Annals of Data Science, 11</em>(5), 1525–1544.</li>
+                            <li>Zubair, M., Iqbal, M. D. A., <b>Shil, A.</b>, Haque, E., Hoque, M. M., & Sarker, I. H.(2020). An efficient k-means clustering algorithm for analysing covid-19. In <em>Proceedings of the International Conference on Hybrid Intelligent Systems</em> (pp. 422–432).</li>
+                        </ul>
+                    </section>
+
+                    <section aria-labelledby="education">
+                        <h2 id="education" class="push-down-3">Education</h2>
+                        <ul id="education">
+                            <li><strong>Ph.D. in Computer Science and Engineering</strong>, 2023 - Ongoing<br><em>University of North Texas, Denton, TX</em></li>
+                            <li><strong>M.Sc. in Computer Science and Engineering</strong>, 2023 - 2025 (Expected) <br><em>University of North Texas, Denton, TX</em></li>
+                            <li><strong>B.Sc. in Computer Science and Engineering</strong>, 2016 - 2021<br><em>Chittagong University of Engineering and Technology, Chittagong</em></li>
+                        </ul>
+                    </section>
+                </div>
+                <div class="col-sm-3">
+                    <section aria-labelledby="recent-news">
+                        <h2 id="recent-news" class="push-down-3">Recent News</h2>
+                        <ul id="news">
+                            <li><b>Aug, 2025</b> Awarded travel grant of $1250. <span class="badge badge-success">New</span></li>
+                            <li><b>June, 2025</b> Awarded Porter-Evan Scholarship of $8000+ for FY25-26.</li>
+                            <li><b>May, 2025</b> <strong>ESAQueryRank</strong> accepted at RANLP! Excited to present at the conference in Varna, Bulgaria.</li>
+                            <li><b>April, 2025</b> Reached 100 citations on <a href="https://scholar.google.com.au/citations?hl=en&pli=1&user=NuIbgCAAAAAJ" target="_blank">Google Scholar profile</a></strong> with an <strong>H-index of 2</strong>.</li>
+                            <li><b>Sept, 2024</b> Awarded a $500 travel grant from the Department of CS, UNT for APWeb-WAIM.</li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Back-to-top button -->
+    <a role="button" id="topper" data-toggle="tooltip" data-placement="top" title="Back to top" class="btn scroll-link" href="#main-content">
+        <i class="fa fa-fw fa-2x fa-caret-up" aria-label="Back to top"></i>
+    </a>
+
+    <!-- Footer Include -->
+    <footer role="contentinfo">
+        <div w3-include-html="footer.html" aria-label="Footer"></div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script async src="js/widgets.js" charset="utf-8"></script>
+    <script src="js/w3data.js"></script>
+    <script>w3IncludeHTML()</script>
+    <script src="js/main.js"></script>
+
+    <!-- Theme switching and accessibility styles -->
 
 
-<p> My research focuses on Knowledge Graphs, Graph ML, NLP, and Applied Machine Learning. You can view my publications on my <a href="https://scholar.google.com.au/citations?hl=en&pli=1&user=NuIbgCAAAAAJ">Google Scholar profile</a>. </p> 
 
-<p> I earned my Bachelor of Science in Computer Science and Engineering from the Chittagong University of Engineering and Technology (CUET) in June 2021. Before graduation, I worked at W3Eden for wordpress plugin management. 
-    Afterward, I joined REVE Systems, where I contributed to enterprise software solutions for the Bangladesh Parliament. Before coming to US,  I joined BKash as a SWE, top company as a part of Vivasoft Limit, to build fintech features for large-scale system. During my tenure, I worked on <a href="https://www.bkash.com/en/page/autopay" >AutoPay feature </a> which enables recurring p2p, pay bill and mobile recharge</a></p>
-   
-            <!-- Google Calendar Appointment Scheduling begin -->
-<link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
-<script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+    <!-- Theme switching JavaScript -->
+    <script>
+        (function() {
+            try {
+                const toggleButton = document.getElementById('theme-toggle');
+                const html = document.documentElement;
 
-<!-- end Google Calendar Appointment Scheduling --> </p> </div>
-        <br>
-        <h3 class="push-down-3">
-            <span>Recent News</span>
-        </h3>
-        <ul id="news">
-            <li>
-                <b>June, 2025</b> Awarded Porter-Evan Scholarship with an amount of $8000+ for FY25-26.
-            </li>
-        <li>
-            <b>May, 2025</b> ESAQueryRank </a> accepted at RANLP! Will be flying to Varna, Bulgaria for the conference.
-        </li>
-        <li>
-            <b>April, 2025</b> Reached to 100 citations on <a href="https://scholar.google.com/citations?user=oGZL0uIAAAAJ">Google Scholar profile</a> with H-index 2.
-        </li>
-        <li>
-            <b>Sept, 2024</b> Awarded $500 travel grant from Dept of CS, UNT for APWeb-WAIM. 
-        </li>
+                // Check for saved theme or system preference
+                const savedTheme = localStorage.getItem('theme') || 
+                    (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                html.setAttribute('data-theme', savedTheme);
+                updateButtonIcon(savedTheme);
 
-</ul>
-<h3 class="push-down-3">
-    <span>Education</span>
-</h3>
-<ul id="education">
-    <li>
-        Ph.D. in Computer Science and Engineering, 2023 - Ongoing
-        <br>
-        <span class="university"><em>University of North Texas, Denton, TX</em></span>
-    </li>
-    
-    <li>
-        B.Sc in Computer Science and Engineering, 2016 - 2021
-        <br>
-        <span class="university"><em>Chittagong University of Engineering and Technology, Chitttagong</em></span>
-    </li>
-</ul>
-</div>
-</div>
-</div>
-<!-- Back-to-top button -->
-<a role="button"
-   id="topper"
-   data-toggle="tooltip"
-   data-placement="top"
-   title="Top"
-   class="btn scroll-link"
-   href="#top"><i class="fa fa-fw fa-2x fa-caret-up" aria-hidden="true"></i></a>
-<!-- footer include -->
-<div w3-include-html="footer.html"></div>
-<!-- jQuery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<!-- Bootstrap JS Library -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
-<!-- html file include script | used for navbar and footer -->
-<script async src="js/widgets.js" charset="utf-8"></script>
-<script src="js/w3data.js"></script>
-<script>w3IncludeHTML()</script>
-<!-- Local scripts -->
-<script src="js/main.js"></script>
+                // Toggle theme on button click
+                toggleButton.addEventListener('click', () => {
+                    const currentTheme = html.getAttribute('data-theme');
+                    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                    html.setAttribute('data-theme', newTheme);
+                    localStorage.setItem('theme', newTheme);
+                    updateButtonIcon(newTheme);
+                    console.log(`Theme switched to: ${newTheme}`);
+                });
 
-<script>
-    function toggleText() {
-        const textBlock = document.getElementById('text-block');
-        const button = document.querySelector('.toggle-button');
-        
-        if (textBlock.style.display === 'none' || textBlock.style.display === '') {
-            textBlock.style.display = 'block';
-            button.textContent = 'Show Less';
-        } else {
-            textBlock.style.display = 'none';
-            button.textContent = 'Show More';
-        }
-    }
-</script>
+                // Update button icon and aria-label
+                function updateButtonIcon(theme) {
+                    toggleButton.setAttribute('aria-label', `Switch to ${theme === 'light' ? 'dark' : 'light'} mode`);
+                    toggleButton.innerHTML = `<i class="fas fa-${theme === 'light' ? 'moon' : 'sun'}"></i>`;
+                }
+            } catch (error) {
+                console.error('Error in theme toggle script:', error);
+            }
+        })();
+    </script>
 </body>
 </html>
 
